@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI課程學員介紹</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:"Microsoft JhengHei",Arial,sans-serif;background:linear-gradient(135deg,#f5f7ff,#eef8ff);color:#333}
+header{text-align:center;padding:35px 20px 25px}header h1{margin:0 0 10px;font-size:32px;color:#3f51b5}header p{margin:0;color:#666;font-size:17px}
+.search-box{width:min(500px,90%);margin:0 auto 30px}.search-box input{width:100%;padding:14px 18px;border:0;border-radius:30px;box-shadow:0 4px 15px rgba(0,0,0,.1);font-size:16px;outline:none}
+.container{width:92%;max-width:1400px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;padding-bottom:50px}
+.card{background:#fff;border-radius:20px;padding:22px;box-shadow:0 6px 20px rgba(0,0,0,.08);transition:.3s;position:relative;overflow:hidden}.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,.15)}
+.number{position:absolute;top:15px;right:18px;background:#3f51b5;color:#fff;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.name{font-size:24px;font-weight:bold;color:#222;margin-bottom:8px}.age{font-size:17px;color:#666;margin-bottom:12px}
+.tag{display:inline-block;padding:6px 12px;border-radius:20px;font-size:14px;font-weight:bold;margin-bottom:15px}.new{background:#e3f2fd;color:#1976d2}.old{background:#fff3e0;color:#ef6c00}
+.section{margin-top:12px;padding-top:12px;border-top:1px solid #eee}.section-title{font-weight:bold;color:#555;margin-bottom:6px}.highlight{background:#fffde7;border-left:5px solid #ffc107;padding:12px;border-radius:8px;line-height:1.6}
+footer{text-align:center;padding:25px;color:#777;background:rgba(255,255,255,.6)}
+@media(max-width:600px){header h1{font-size:25px}.container{width:94%;grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>🤖 AI課程學員介紹</h1><p>一起學AI，一起認識新朋友！</p></header>
+<div class="search-box"><input type="text" id="searchInput" placeholder="🔍 搜尋姓名、編號或關鍵字..." onkeyup="searchCards()"></div>
+<main class="container" id="cardContainer">
+<div class="card"><div class="number">20</div><div class="name">廖@昭</div><div class="age">年齡：75</div><span class="tag new">新學員／重修</span><div class="section"><div class="section-title">📚 背景</div><div>曾參加2次AI課程，重修是為了喚起學習記憶。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「喚起學習記憶」</div></div></div>
+<div class="card"><div class="number">8</div><div class="name">林@華</div><div class="age">年齡：70</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>週六放假無趣，來認識新東西、交年輕朋友。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「交年輕朋友們」</div></div></div>
+<div class="card"><div class="number">7</div><div class="name">黃@香</div><div class="age">年齡：70</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第3次來社大，想學習AI。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「70也要學AI」</div></div></div>
+<div class="card"><div class="number">27</div><div class="name">葉@美</div><div class="age">年齡：70</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次學AI，希望了解如何應用在生活中。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「70第一次學AI」</div></div></div>
+<div class="card"><div class="number">15</div><div class="name">許@</div><div class="age">年齡：69</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，已有使用經驗，想更深入學習。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「會用，但是想再深入一點學習」</div></div></div>
+<div class="card"><div class="number">1</div><div class="name">王@珠</div><div class="age">年齡：68</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>已上課很多期，想學習AI；本次請假。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「因為想學習AI，所以來社大上課」</div></div></div>
+<div class="card"><div class="number">21</div><div class="name">李@平</div><div class="age">年齡：67</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，退休後想學習新知。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「退休沒事做，所以想來上課」</div></div></div>
+<div class="card"><div class="number">10</div><div class="name">楊@姝</div><div class="age">年齡：67</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>喜歡課堂氛圍，因此繼續學習。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「溫故知新」</div></div></div>
+<div class="card"><div class="number">12</div><div class="name">林@雲</div><div class="age">年齡：26</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第2次上課，覺得課程先進、跟得上時事，老師細心，也有同學協助。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「又有好心姐姐幫忙」</div></div></div>
+<div class="card"><div class="number">9</div><div class="name">鄭@彰</div><div class="age">年齡：65</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第2次上課，希望增長知識、跟上世界潮流。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「來上最認真的老師的課」</div></div></div>
+<div class="card"><div class="number">4</div><div class="name">曾@美</div><div class="age">年齡：64</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第2次上課，因有事請假一個月。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「因有事已跟老師請假一個月」</div></div></div>
+<div class="card"><div class="number">19</div><div class="name">曾@銘</div><div class="age">年齡：64</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，想深入了解AI的應用、難度與廣度，也希望與同學交流。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「AI的應用有多難學、有多廣度」</div></div></div>
+<div class="card"><div class="number">16</div><div class="name">粘@莉</div><div class="age">年齡：63</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>初次來社大，希望將AI融入生活。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「現在是AI時代」</div></div></div>
+<div class="card"><div class="number">17</div><div class="name">莊@章</div><div class="age">年齡：62</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，利用時間空檔學AI。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「利用時間空檔學AI」</div></div></div>
+<div class="card"><div class="number">25</div><div class="name">施@玲</div><div class="age">年齡：62</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，週六下午在家無聊，想培養興趣。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「想來學個興趣」</div></div></div>
+<div class="card"><div class="number">13</div><div class="name">林@儒</div><div class="age">年齡：61</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，週六下午有時間，想增加AI能力。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「想增加AI的能力」</div></div></div>
+<div class="card"><div class="number">18</div><div class="name">施@蓁</div><div class="age">年齡：58</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次來社大，想學習AI。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「想學習AI」</div></div></div>
+<div class="card"><div class="number">5</div><div class="name">黃@庭</div><div class="age">年齡：56</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第X次上課，週六下午來上課，提升電腦學習力。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「來這邊上課湊人氣」</div></div></div>
+<div class="card"><div class="number">2</div><div class="name">林@慧</div><div class="age">年齡：53</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第2次上課，上學期缺課較多，所以再來學一次。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「再來學一次」</div></div></div>
+<div class="card"><div class="number">6</div><div class="name">王@貞</div><div class="age">年齡：52</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第2次上課，希望週六過得充實。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「想要過充實的週六」</div></div></div>
+<div class="card"><div class="number">24</div><div class="name">高@弘</div><div class="age">年齡：50</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，週六下午在家無聊。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「週六下午在家無聊，所以來上課」</div></div></div>
+<div class="card"><div class="number">3</div><div class="name">許@榛</div><div class="age">年齡：47</div><span class="tag old">舊學員</span><div class="section"><div class="section-title">📚 背景</div><div>第3次上課，上學期缺課較多，希望能運用在工作上。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「可以運用在工作上」</div></div></div>
+<div class="card"><div class="number">22</div><div class="name">陸@蘭</div><div class="age">年齡：37</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，希望認識AI並應用於生活。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「能應用到生活」</div></div></div>
+<div class="card"><div class="number">23</div><div class="name">林@鋐</div><div class="age">年齡：19</div><span class="tag new">新學員</span><div class="section"><div class="section-title">📚 背景</div><div>第一次上課，陪媽媽一起來，怕媽媽一個人無聊。</div></div><div class="section"><div class="section-title">✨ 印象深刻</div><div class="highlight">「怕我媽媽自己一個人來上課太無聊」</div></div></div>
+<div class="card"><div class="number">11</div><div class="name">資料未提供</div><div class="age">年齡：—</div><span class="tag">未提供</span><div class="section"><div class="section-title">📚 背景</div><div>尚未提供自我介紹內容。</div></div></div>
+<div class="card"><div class="number">14</div><div class="name">資料未提供</div><div class="age">年齡：—</div><span class="tag">未提供</span><div class="section"><div class="section-title">📚 背景</div><div>尚未提供自我介紹內容。</div></div></div>
+</main>
+<footer>🤖 AI學習之路，一起學、一起玩、一起成長！</footer>
+<script>
+function searchCards(){const f=document.getElementById("searchInput").value.toLowerCase();document.querySelectorAll(".card").forEach(c=>c.style.display=c.innerText.toLowerCase().includes(f)?"":"none")}
+</script>
+</body>
+</html>
